@@ -57,6 +57,7 @@
     <Compile Include="Note.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sequence.cs" />
     <EmbeddedResource Include="Piano Practice.resx">
       <DependentUpon>Piano Practice.cs</DependentUpon>
     </EmbeddedResource>

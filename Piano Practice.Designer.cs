@@ -1,6 +1,6 @@
 ﻿namespace piano_practice
 {
-    partial class Window
+    partial class window
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Window));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(window));
             this.c_key = new System.Windows.Forms.PictureBox();
             this.d_key = new System.Windows.Forms.PictureBox();
             this.e_key = new System.Windows.Forms.PictureBox();
@@ -42,6 +42,7 @@
             this.g_sharp_key = new System.Windows.Forms.PictureBox();
             this.a_sharp_key = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnPlaySequence = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.c_key)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.d_key)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.e_key)).BeginInit();
@@ -233,11 +234,24 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "label1";
             // 
-            // Window
+            // btnPlaySequence
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.btnPlaySequence.CausesValidation = false;
+            this.btnPlaySequence.Location = new System.Drawing.Point(552, 569);
+            this.btnPlaySequence.Name = "btnPlaySequence";
+            this.btnPlaySequence.Size = new System.Drawing.Size(160, 36);
+            this.btnPlaySequence.TabIndex = 13;
+            this.btnPlaySequence.TabStop = false;
+            this.btnPlaySequence.Text = "Play Sequence";
+            this.btnPlaySequence.UseVisualStyleBackColor = true;
+            this.btnPlaySequence.Click += new System.EventHandler(this.btnPlaySequence_Click);
+            // 
+            // window
+            // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.ClientSize = new System.Drawing.Size(1262, 977);
+            this.Controls.Add(this.btnPlaySequence);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.a_sharp_key);
             this.Controls.Add(this.g_sharp_key);
@@ -253,8 +267,10 @@
             this.Controls.Add(this.c_key);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1280, 1024);
-            this.Name = "Window";
+            this.MaximumSize = new System.Drawing.Size(1280, 1024);
+            this.MinimumSize = new System.Drawing.Size(1279, 1023);
+            this.Name = "window";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Window";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Window_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Window_KeyUp);
@@ -290,6 +306,7 @@
         private System.Windows.Forms.PictureBox g_sharp_key;
         private System.Windows.Forms.PictureBox a_sharp_key;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnPlaySequence;
     }
 }
 

@@ -74,11 +74,6 @@ namespace piano_practice
                 key.Open(new System.Uri(@"sound\" + this.note_code + ".wav", UriKind.Relative));
                 key.Play();
             }
-            if (playing)
-            {
-                playing = false;
-            }
-
         }
     }
 }

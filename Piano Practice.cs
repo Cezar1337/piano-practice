@@ -260,27 +260,27 @@ namespace piano_practice
         {
             Sequence s = new Sequence(lengthofSequence);
             sequence = s.ReturnSequence();
-            String sequenceText="";
+            //testing if a correct sequence is generated
+            String sequenceText ="";
             for(int i=0;i<sequence.Length;i++)
             {
                 sequenceText = sequenceText + " " + sequence[i].ToString();
             }
             label1.Text = sequenceText;
+            //testing if a correct sequence is generated
 
-            btnPlaySequence.Enabled = false;
-            playingEnabled = false;
+            btnPlaySequence.Enabled = false; //disable further sequence generation
+            playingEnabled = false; //disable playing while a sequence is being shown
             for(int i=0;i<sequence.Length;i++)
             {
-                HighlightKey(sequence[i], true);
-                //notes[sequence[i]].Play();
+                HighlightKey(sequence[i], true); //highlight a key
                 wait(800);
-                HighlightKey(sequence[i], false);
-                //notes[sequence[i]].playing = false;
+                HighlightKey(sequence[i], false); //undo highlight
                 wait(200);
             }
-            btnPlaySequence.Enabled = true;
-            playingEnabled = true;
-            this.Focus();
+            btnPlaySequence.Enabled = true; //temporary until a sequence testing method is implemented
+            playingEnabled = true; //enable playing
+            this.Focus(); //added to prevent additional system sounds while playing notes
         }
     }
 }

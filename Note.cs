@@ -68,10 +68,10 @@ namespace piano_practice
         public void Play()
         {
             var key = new System.Windows.Media.MediaPlayer();
-            if (!playing)
+            if (!playing) //is a sound currently being played?
             {
-                playing = true;
-                key.Open(new System.Uri(@"sound\" + this.note_code + ".wav", UriKind.Relative));
+                playing = true; //prevent starting new playback
+                key.Open(new System.Uri(@"sound\" + this.note_code + ".wav", UriKind.Relative)); //example path: sound\D#.wav
                 key.Play();
             }
         }

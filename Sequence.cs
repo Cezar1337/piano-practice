@@ -20,6 +20,7 @@ namespace piano_practice
                 arr[i] = (int)rnd.Next(0, 12);
             }
         }
+
         public int[] ReturnSequence()
         {
             return arr;

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="piano_practice.Note">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAwACAAAAAAAAAAAgAAEAAAAAAA=</HashCode>
+      <FileName>Note.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="piano_practice.window">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="a_key" Hidden="true" />
+      <Field Name="a_sharp_key" Hidden="true" />
+      <Field Name="b_key" Hidden="true" />
+      <Field Name="btnHelp" Hidden="true" />
+      <Field Name="btnPlaySequence" Hidden="true" />
+      <Field Name="btnRestart" Hidden="true" />
+      <Field Name="c_key" Hidden="true" />
+      <Field Name="c_sharp_key" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="d_key" Hidden="true" />
+      <Field Name="d_sharp_key" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="e_key" Hidden="true" />
+      <Field Name="f_key" Hidden="true" />
+      <Field Name="f_sharp_key" Hidden="true" />
+      <Field Name="g_key" Hidden="true" />
+      <Field Name="g_sharp_key" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>ACASAAAEgiAAABQABBCAAAACAYAABCDMAYBAIAAAKYA=</HashCode>
+      <FileName>Piano Practice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="piano_practice.Program">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="piano_practice.Sequence">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAEAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sequence.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

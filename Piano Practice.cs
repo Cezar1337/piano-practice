@@ -15,6 +15,7 @@ namespace piano_practice
         Note[] notes = new Note[12];
         int[] sequence;
         int lengthofSequence;
+        bool playingEnabled = true;
 
         public window()
         {
@@ -42,113 +43,199 @@ namespace piano_practice
             this.Focus();
         }
 
-        private void Window_KeyDown(object sender, KeyEventArgs e)
+        private void HighlightKey(int keyNumber, bool playing)
         {
-            switch (e.KeyCode.ToString())
+            switch (keyNumber)
+            {
+                case 0:
+                    if (playing)
+                    {
+                        c_key.BackColor = Color.Orange;
+                    }
+                    else
+                    {
+                        c_key.BackColor = Color.White;
+                    }
+                    break;
+                case 1:
+                    if (playing)
+                    {
+                        d_key.BackColor = Color.Orange;
+                    }
+                    else
+                    {
+                        d_key.BackColor = Color.White;
+                    }
+                    break;
+                case 2:
+                    if (playing)
+                    {
+                        e_key.BackColor = Color.Orange;
+                    }
+                    else
+                    {
+                        e_key.BackColor = Color.White;
+                    }
+                    break;
+                case 3:
+                    if (playing)
+                    {
+                        f_key.BackColor = Color.Orange;
+                    }
+                    else
+                    {
+                        f_key.BackColor = Color.White;
+                    }
+                    break;
+                case 4:
+                    if (playing)
+                    {
+                        g_key.BackColor = Color.Orange;
+                    }
+                    else
+                    {
+                        g_key.BackColor = Color.White;
+                    }
+                    break;
+                case 5:
+                    if (playing)
+                    {
+                        a_key.BackColor = Color.Orange;
+                    }
+                    else
+                    {
+                        a_key.BackColor = Color.White;
+                    }
+                    break;
+                case 6:
+                    if (playing)
+                    {
+                        b_key.BackColor = Color.Orange;
+                    }
+                    else
+                    {
+                        b_key.BackColor = Color.White;
+                    }
+                    break;
+                case 7:
+                    if (playing)
+                    {
+                        c_sharp_key.BackColor = Color.DarkOrange;
+                    }
+                    else
+                    {
+                        c_sharp_key.BackColor = Color.Black;
+                    }
+                    break;
+                case 8:
+                    if (playing)
+                    {
+                        d_sharp_key.BackColor = Color.DarkOrange;
+                    }
+                    else
+                    {
+                        d_sharp_key.BackColor = Color.Black;
+                    }
+                    break;
+                case 9:
+                    if (playing)
+                    {
+                        f_sharp_key.BackColor = Color.DarkOrange;
+                    }
+                    else
+                    {
+                        f_sharp_key.BackColor = Color.Black;
+                    }
+                    break;
+                case 10:
+                    if (playing)
+                    {
+                        g_sharp_key.BackColor = Color.DarkOrange;
+                    }
+                    else
+                    {
+                        g_sharp_key.BackColor = Color.Black;
+                    }
+                    break;
+                case 11:
+                    if (playing)
+                    {
+                        a_sharp_key.BackColor = Color.DarkOrange;
+                    }
+                    else
+                    {
+                        a_sharp_key.BackColor = Color.Black;
+                    }
+                    break;
+            }
+        }
+        private int ReturnKeyID(String keyCode)
+        {
+            int keyID = -1;
+            switch (keyCode)
             {
                 case "Z":
-                    c_key.BackColor=Color.Aqua;
-                    notes[0].Play();
+                    keyID = 0;
                     break;
                 case "X":
-                    d_key.BackColor = Color.Aqua;
-                    notes[1].Play();
+                    keyID = 1;
                     break;
                 case "C":
-                    e_key.BackColor = Color.Aqua;
-                    notes[2].Play();
+                    keyID = 2;
                     break;
                 case "V":
-                    f_key.BackColor = Color.Aqua;
-                    notes[3].Play();
+                    keyID = 3;
                     break;
                 case "B":
-                    g_key.BackColor = Color.Aqua;
-                    notes[4].Play();
+                    keyID = 4;
                     break;
                 case "N":
-                    a_key.BackColor = Color.Aqua;
-                    notes[5].Play();
+                    keyID = 5;
                     break;
                 case "M":
-                    b_key.BackColor = Color.Aqua;
-                    notes[6].Play();
+                    keyID = 6;
                     break;
                 case "S":
-                    c_sharp_key.BackColor = Color.DarkBlue;
-                    notes[7].Play();
+                    keyID = 7;
                     break;
                 case "D":
-                    d_sharp_key.BackColor = Color.DarkBlue;
-                    notes[8].Play();
+                    keyID = 8;
                     break;
                 case "G":
-                    f_sharp_key.BackColor = Color.DarkBlue;
-                    notes[9].Play();
+                    keyID = 9;
                     break;
                 case "H":
-                    g_sharp_key.BackColor = Color.DarkBlue;
-                    notes[10].Play();
+                    keyID = 10;
                     break;
                 case "J":
-                    a_sharp_key.BackColor = Color.DarkBlue;
-                    notes[11].Play();
+                    keyID = 11;
                     break;
+            }
+            return keyID;
+        }
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (playingEnabled)
+            {
+                int code = ReturnKeyID(e.KeyCode.ToString());
+                if (code >= 0)
+                {
+                    HighlightKey(code, true);
+                    notes[code].Play();
+                }
             }
         }
 
         private void Window_KeyUp(object sender, KeyEventArgs e)
         {
-            switch (e.KeyCode.ToString())
+            if (playingEnabled)
             {
-                case "Z":
-                    c_key.BackColor = Color.White;
-                    notes[0].playing = false;
-                    break;
-                case "X":
-                    d_key.BackColor = Color.White;
-                    notes[1].playing = false;
-                    break;
-                case "C":
-                    e_key.BackColor = Color.White;
-                    notes[2].playing = false;
-                    break;
-                case "V":
-                    f_key.BackColor = Color.White;
-                    notes[3].playing = false;
-                    break;
-                case "B":
-                    g_key.BackColor = Color.White;
-                    notes[4].playing = false;
-                    break;
-                case "N":
-                    a_key.BackColor = Color.White;
-                    notes[5].playing = false;
-                    break;
-                case "M":
-                    b_key.BackColor = Color.White;
-                    notes[6].playing = false;
-                    break;
-                case "S":
-                    c_sharp_key.BackColor = Color.Black;
-                    notes[7].playing = false;
-                    break;
-                case "D":
-                    d_sharp_key.BackColor = Color.Black;
-                    notes[8].playing = false;
-                    break;
-                case "G":
-                    f_sharp_key.BackColor = Color.Black;
-                    notes[9].playing = false;
-                    break;
-                case "H":
-                    g_sharp_key.BackColor = Color.Black;
-                    notes[10].playing = false;
-                    break;
-                case "J":
-                    a_sharp_key.BackColor = Color.Black;
-                    notes[11].playing = false;
-                    break;
+                int code = ReturnKeyID(e.KeyCode.ToString());
+                if (code >= 0)
+                {
+                    HighlightKey(code, false);
+                    notes[code].playing = false;
+                }
             }
         }
 
@@ -162,7 +249,18 @@ namespace piano_practice
                 sequenceText = sequenceText + " " + sequence[i].ToString();
             }
             label1.Text = sequenceText;
+
             btnPlaySequence.Enabled = false;
+            playingEnabled = false;
+            for(int i=0;i<sequence.Length;i++)
+            {
+                HighlightKey(sequence[i], true);
+                notes[sequence[i]].Play();
+                HighlightKey(sequence[i], false);
+                notes[sequence[i]].playing = false;
+            }
+            btnPlaySequence.Enabled = true;
+            playingEnabled = true;
             this.Focus();
         }
     }

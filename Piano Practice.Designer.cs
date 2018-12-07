@@ -43,6 +43,8 @@
             this.a_sharp_key = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnPlaySequence = new System.Windows.Forms.Button();
+            this.btnHelp = new System.Windows.Forms.Button();
+            this.btnRestart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.c_key)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.d_key)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.e_key)).BeginInit();
@@ -61,7 +63,7 @@
             // 
             this.c_key.BackColor = System.Drawing.Color.White;
             this.c_key.Image = ((System.Drawing.Image)(resources.GetObject("c_key.Image")));
-            this.c_key.Location = new System.Drawing.Point(72, 608);
+            this.c_key.Location = new System.Drawing.Point(72, 310);
             this.c_key.Margin = new System.Windows.Forms.Padding(0);
             this.c_key.MaximumSize = new System.Drawing.Size(160, 360);
             this.c_key.MinimumSize = new System.Drawing.Size(160, 360);
@@ -75,7 +77,7 @@
             // 
             this.d_key.BackColor = System.Drawing.Color.White;
             this.d_key.Image = ((System.Drawing.Image)(resources.GetObject("d_key.Image")));
-            this.d_key.Location = new System.Drawing.Point(232, 608);
+            this.d_key.Location = new System.Drawing.Point(232, 310);
             this.d_key.Margin = new System.Windows.Forms.Padding(0);
             this.d_key.MaximumSize = new System.Drawing.Size(160, 360);
             this.d_key.MinimumSize = new System.Drawing.Size(160, 360);
@@ -89,7 +91,7 @@
             // 
             this.e_key.BackColor = System.Drawing.Color.White;
             this.e_key.Image = ((System.Drawing.Image)(resources.GetObject("e_key.Image")));
-            this.e_key.Location = new System.Drawing.Point(392, 608);
+            this.e_key.Location = new System.Drawing.Point(392, 310);
             this.e_key.Margin = new System.Windows.Forms.Padding(0);
             this.e_key.MaximumSize = new System.Drawing.Size(160, 360);
             this.e_key.MinimumSize = new System.Drawing.Size(160, 360);
@@ -103,7 +105,7 @@
             // 
             this.f_key.BackColor = System.Drawing.Color.White;
             this.f_key.Image = ((System.Drawing.Image)(resources.GetObject("f_key.Image")));
-            this.f_key.Location = new System.Drawing.Point(552, 608);
+            this.f_key.Location = new System.Drawing.Point(552, 310);
             this.f_key.Margin = new System.Windows.Forms.Padding(0);
             this.f_key.MaximumSize = new System.Drawing.Size(160, 360);
             this.f_key.MinimumSize = new System.Drawing.Size(160, 360);
@@ -117,7 +119,7 @@
             // 
             this.g_key.BackColor = System.Drawing.Color.White;
             this.g_key.Image = ((System.Drawing.Image)(resources.GetObject("g_key.Image")));
-            this.g_key.Location = new System.Drawing.Point(712, 608);
+            this.g_key.Location = new System.Drawing.Point(712, 310);
             this.g_key.Margin = new System.Windows.Forms.Padding(0);
             this.g_key.MaximumSize = new System.Drawing.Size(160, 360);
             this.g_key.MinimumSize = new System.Drawing.Size(160, 360);
@@ -131,7 +133,7 @@
             // 
             this.a_key.BackColor = System.Drawing.Color.White;
             this.a_key.Image = ((System.Drawing.Image)(resources.GetObject("a_key.Image")));
-            this.a_key.Location = new System.Drawing.Point(872, 608);
+            this.a_key.Location = new System.Drawing.Point(872, 310);
             this.a_key.Margin = new System.Windows.Forms.Padding(0);
             this.a_key.MaximumSize = new System.Drawing.Size(160, 360);
             this.a_key.MinimumSize = new System.Drawing.Size(160, 360);
@@ -145,7 +147,7 @@
             // 
             this.b_key.BackColor = System.Drawing.Color.White;
             this.b_key.Image = ((System.Drawing.Image)(resources.GetObject("b_key.Image")));
-            this.b_key.Location = new System.Drawing.Point(1032, 608);
+            this.b_key.Location = new System.Drawing.Point(1032, 310);
             this.b_key.Margin = new System.Windows.Forms.Padding(0);
             this.b_key.MaximumSize = new System.Drawing.Size(160, 360);
             this.b_key.MinimumSize = new System.Drawing.Size(160, 360);
@@ -159,7 +161,7 @@
             // 
             this.c_sharp_key.BackColor = System.Drawing.Color.Black;
             this.c_sharp_key.Image = ((System.Drawing.Image)(resources.GetObject("c_sharp_key.Image")));
-            this.c_sharp_key.Location = new System.Drawing.Point(198, 608);
+            this.c_sharp_key.Location = new System.Drawing.Point(198, 310);
             this.c_sharp_key.Margin = new System.Windows.Forms.Padding(0);
             this.c_sharp_key.MaximumSize = new System.Drawing.Size(70, 220);
             this.c_sharp_key.MinimumSize = new System.Drawing.Size(70, 220);
@@ -173,7 +175,7 @@
             // 
             this.d_sharp_key.BackColor = System.Drawing.Color.Black;
             this.d_sharp_key.Image = ((System.Drawing.Image)(resources.GetObject("d_sharp_key.Image")));
-            this.d_sharp_key.Location = new System.Drawing.Point(357, 608);
+            this.d_sharp_key.Location = new System.Drawing.Point(357, 310);
             this.d_sharp_key.Margin = new System.Windows.Forms.Padding(0);
             this.d_sharp_key.MaximumSize = new System.Drawing.Size(70, 220);
             this.d_sharp_key.MinimumSize = new System.Drawing.Size(70, 220);
@@ -187,7 +189,7 @@
             // 
             this.f_sharp_key.BackColor = System.Drawing.Color.Black;
             this.f_sharp_key.Image = ((System.Drawing.Image)(resources.GetObject("f_sharp_key.Image")));
-            this.f_sharp_key.Location = new System.Drawing.Point(684, 608);
+            this.f_sharp_key.Location = new System.Drawing.Point(684, 310);
             this.f_sharp_key.Margin = new System.Windows.Forms.Padding(0);
             this.f_sharp_key.MaximumSize = new System.Drawing.Size(70, 220);
             this.f_sharp_key.MinimumSize = new System.Drawing.Size(70, 220);
@@ -201,7 +203,7 @@
             // 
             this.g_sharp_key.BackColor = System.Drawing.Color.Black;
             this.g_sharp_key.Image = ((System.Drawing.Image)(resources.GetObject("g_sharp_key.Image")));
-            this.g_sharp_key.Location = new System.Drawing.Point(838, 608);
+            this.g_sharp_key.Location = new System.Drawing.Point(838, 310);
             this.g_sharp_key.Margin = new System.Windows.Forms.Padding(0);
             this.g_sharp_key.MaximumSize = new System.Drawing.Size(70, 220);
             this.g_sharp_key.MinimumSize = new System.Drawing.Size(70, 220);
@@ -215,7 +217,7 @@
             // 
             this.a_sharp_key.BackColor = System.Drawing.Color.Black;
             this.a_sharp_key.Image = ((System.Drawing.Image)(resources.GetObject("a_sharp_key.Image")));
-            this.a_sharp_key.Location = new System.Drawing.Point(992, 608);
+            this.a_sharp_key.Location = new System.Drawing.Point(992, 310);
             this.a_sharp_key.Margin = new System.Windows.Forms.Padding(0);
             this.a_sharp_key.MaximumSize = new System.Drawing.Size(70, 220);
             this.a_sharp_key.MinimumSize = new System.Drawing.Size(70, 220);
@@ -236,21 +238,51 @@
             // 
             // btnPlaySequence
             // 
+            this.btnPlaySequence.BackColor = System.Drawing.Color.Maroon;
+            this.btnPlaySequence.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPlaySequence.BackgroundImage")));
             this.btnPlaySequence.CausesValidation = false;
-            this.btnPlaySequence.Location = new System.Drawing.Point(552, 569);
+            this.btnPlaySequence.FlatAppearance.BorderSize = 0;
+            this.btnPlaySequence.Location = new System.Drawing.Point(552, 265);
             this.btnPlaySequence.Name = "btnPlaySequence";
-            this.btnPlaySequence.Size = new System.Drawing.Size(160, 36);
+            this.btnPlaySequence.Size = new System.Drawing.Size(160, 40);
             this.btnPlaySequence.TabIndex = 13;
             this.btnPlaySequence.TabStop = false;
-            this.btnPlaySequence.Text = "Play Sequence";
-            this.btnPlaySequence.UseVisualStyleBackColor = true;
+            this.btnPlaySequence.UseVisualStyleBackColor = false;
             this.btnPlaySequence.Click += new System.EventHandler(this.btnPlaySequence_Click);
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.BackColor = System.Drawing.Color.Maroon;
+            this.btnHelp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHelp.BackgroundImage")));
+            this.btnHelp.CausesValidation = false;
+            this.btnHelp.Location = new System.Drawing.Point(386, 265);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(160, 40);
+            this.btnHelp.TabIndex = 14;
+            this.btnHelp.TabStop = false;
+            this.btnHelp.UseVisualStyleBackColor = false;
+            // 
+            // btnRestart
+            // 
+            this.btnRestart.BackColor = System.Drawing.Color.Maroon;
+            this.btnRestart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRestart.BackgroundImage")));
+            this.btnRestart.CausesValidation = false;
+            this.btnRestart.Location = new System.Drawing.Point(718, 265);
+            this.btnRestart.Name = "btnRestart";
+            this.btnRestart.Size = new System.Drawing.Size(160, 40);
+            this.btnRestart.TabIndex = 15;
+            this.btnRestart.TabStop = false;
+            this.btnRestart.UseVisualStyleBackColor = false;
             // 
             // window
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-            this.ClientSize = new System.Drawing.Size(1262, 977);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.btnRestart);
+            this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.btnPlaySequence);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.a_sharp_key);
@@ -266,12 +298,14 @@
             this.Controls.Add(this.d_key);
             this.Controls.Add(this.c_key);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1280, 1024);
-            this.MinimumSize = new System.Drawing.Size(1279, 1023);
+            this.MaximumSize = new System.Drawing.Size(1280, 720);
+            this.MinimumSize = new System.Drawing.Size(1279, 719);
             this.Name = "window";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Window";
+            this.Text = "Piano Practice";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Window_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Window_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.c_key)).EndInit();
@@ -307,6 +341,8 @@
         private System.Windows.Forms.PictureBox a_sharp_key;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPlaySequence;
+        private System.Windows.Forms.Button btnHelp;
+        private System.Windows.Forms.Button btnRestart;
     }
 }
 

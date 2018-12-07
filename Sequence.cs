@@ -17,7 +17,7 @@ namespace piano_practice
             Random rnd = new Random();
             for(int i=0;i < l;i++)
             {
-                arr[i] = rnd.Next(1, 13);
+                arr[i] = (int)rnd.Next(0, 12);
             }
         }
         public int[] ReturnSequence()

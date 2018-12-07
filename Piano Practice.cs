@@ -17,6 +17,23 @@ namespace piano_practice
         int lengthofSequence;
         bool playingEnabled = true;
 
+        public void wait(int milliseconds)
+        {
+            System.Windows.Forms.Timer timer1 = new System.Windows.Forms.Timer();
+            if (milliseconds == 0 || milliseconds < 0) return;
+            timer1.Interval = milliseconds;
+            timer1.Enabled = true;
+            timer1.Start();
+            timer1.Tick += (s, e) =>
+            {
+                timer1.Enabled = false;
+                timer1.Stop();
+            };
+            while (timer1.Enabled)
+            {
+                Application.DoEvents();
+            }
+        }
         public window()
         {
             InitializeComponent();
@@ -255,9 +272,11 @@ namespace piano_practice
             for(int i=0;i<sequence.Length;i++)
             {
                 HighlightKey(sequence[i], true);
-                notes[sequence[i]].Play();
+                //notes[sequence[i]].Play();
+                wait(800);
                 HighlightKey(sequence[i], false);
-                notes[sequence[i]].playing = false;
+                //notes[sequence[i]].playing = false;
+                wait(200);
             }
             btnPlaySequence.Enabled = true;
             playingEnabled = true;

@@ -48,18 +48,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Piano Practice.cs">
+    <Compile Include="PianoPractice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Piano Practice.Designer.cs">
-      <DependentUpon>Piano Practice.cs</DependentUpon>
+    <Compile Include="PianoPractice.Designer.cs">
+      <DependentUpon>PianoPractice.cs</DependentUpon>
     </Compile>
     <Compile Include="Note.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sequence.cs" />
-    <EmbeddedResource Include="Piano Practice.resx">
-      <DependentUpon>Piano Practice.cs</DependentUpon>
+    <EmbeddedResource Include="PianoPractice.resx">
+      <DependentUpon>PianoPractice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -70,8 +70,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

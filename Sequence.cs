@@ -9,7 +9,7 @@ namespace piano_practice
     class Sequence
     {
         public int length;
-        int[] arr;
+        private int[] arr;
         public Sequence(int l)
         {
             this.length = l;

@@ -10,12 +10,58 @@ using System.Windows.Forms;
 
 namespace piano_practice
 {
-    public partial class window : Form
+    public partial class PianoPractice : Form
     {
-        Note[] notes = new Note[12];
-        int[] sequence;
-        int lengthofSequence;
-        bool playingEnabled = true;
+        private Note[] notes = new Note[12];
+        private int[] sequence;
+        private int lengthofSequence;
+        public bool playingEnabled = true;
+        public List<int> sequencePlayed = new List<int>();
+        private int sequenceCounter;
+        private bool waitingForSequence = false;
+        private int score = 0;
+        private int errors = 0;
+        private int roundsCompleted = 0;
+
+        public void ClearGameInfo()
+        {
+            score = 0;
+            errors = 0;
+            roundsCompleted = 0;
+            lengthofSequence = 3;
+            lblScore.Text = "Score: " + score.ToString();
+            lblErrors.Text = "Errors: " + errors.ToString() + "/3";
+            btnPlaySequence.Enabled = true;
+            playingEnabled = true;
+            waitingForSequence = false;
+        }
+
+        public bool AreSequencesEqual()
+        {
+            String sequence1 = "";
+            String sequence2 = "";
+            foreach(int i in sequencePlayed)
+            {
+                sequence1 += i.ToString();
+            }
+            for(int i=0;i<lengthofSequence;i++)
+            {
+                sequence2 += sequence[i].ToString();
+            }
+            sequencePlayed.Clear();
+            waitingForSequence = false;
+            sequenceCounter = 0;
+            if (sequence1.Equals(sequence2))
+            {
+                button1.BackColor = Color.Green;
+                return true;
+            }
+            else
+            {
+                button1.BackColor = Color.Red;
+                return false;
+            }
+        }
 
         public void wait(int milliseconds)
         {
@@ -34,11 +80,12 @@ namespace piano_practice
                 Application.DoEvents();
             }
         }
-        public window()
+        public PianoPractice()
         {
             InitializeComponent();
 
             lengthofSequence = 3;
+            sequenceCounter = 0;
 
             for(int i=0;i<12;i++)
             {
@@ -58,6 +105,11 @@ namespace piano_practice
             notes[10].Translate("H");
             notes[11].Translate("J");
             this.Focus();
+        }
+
+        public void AddToSequenceList(int keyID)
+        {
+            sequencePlayed.Add(keyID);
         }
 
         private void HighlightKey(int keyNumber, bool playing)
@@ -252,6 +304,41 @@ namespace piano_practice
                 {
                     HighlightKey(code, false);
                     notes[code].playing = false;
+                    String label2Text = ""; //for testing
+                    if (waitingForSequence)
+                    {
+                        AddToSequenceList(code);
+                        foreach (int a in sequencePlayed) //for testing
+                        {
+                            label2Text += a.ToString() + " ";
+                        }
+                        label2.Text = label2Text;
+                        sequenceCounter++;
+                    }
+                }
+                if(sequenceCounter==lengthofSequence && waitingForSequence)
+                {
+                    if(AreSequencesEqual())
+                    {
+                        roundsCompleted++;
+                        score += 5 * lengthofSequence;
+                        lblScore.Text = "Score: " + score.ToString();
+                        if (roundsCompleted%2==0 && lengthofSequence<10)
+                        {
+                            lengthofSequence++;
+                        }
+                    }
+                    else
+                    {
+                        errors++;
+                        lblErrors.Text = "Errors: " + errors.ToString() + "/3";
+                        if(errors==3)
+                        {
+                            MessageBox.Show("Game over! Your score is: "+score);
+                            ClearGameInfo();
+                        }
+                    }
+                    btnPlaySequence.Enabled = true;
                 }
             }
         }
@@ -260,6 +347,8 @@ namespace piano_practice
         {
             Sequence s = new Sequence(lengthofSequence);
             sequence = s.ReturnSequence();
+            waitingForSequence = true;
+            btnHelp.Enabled = false;
             //testing if a correct sequence is generated
             String sequenceText ="";
             for(int i=0;i<sequence.Length;i++)
@@ -278,9 +367,19 @@ namespace piano_practice
                 HighlightKey(sequence[i], false); //undo highlight
                 wait(200);
             }
-            btnPlaySequence.Enabled = true; //temporary until a sequence testing method is implemented
             playingEnabled = true; //enable playing
             this.Focus(); //added to prevent additional system sounds while playing notes
+        }
+
+        private void btnRestart_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Game restarted!");
+            ClearGameInfo();
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Replay sequences to earn points, after a few won rounds, the sequences get longer!\nPress \"Play Sequence\" to start the game\nYou can restart the game at any point by pressing \"Restart\"!\nGood Luck!");
         }
     }
 }

@@ -1,9 +1,9 @@
 c:\users\cezar\documents\visual studio 2015\Projects\piano-practice\bin\Debug\piano-practice.exe.config
 C:\Users\cezar\documents\visual studio 2015\Projects\piano-practice\obj\Debug\piano-practice.csprojResolveAssemblyReference.cache
-C:\Users\cezar\documents\visual studio 2015\Projects\piano-practice\obj\Debug\piano_practice.Window.resources
 C:\Users\cezar\documents\visual studio 2015\Projects\piano-practice\obj\Debug\piano_practice.Properties.Resources.resources
 C:\Users\cezar\documents\visual studio 2015\Projects\piano-practice\obj\Debug\piano-practice.csproj.GenerateResource.Cache
 C:\Users\cezar\documents\visual studio 2015\Projects\piano-practice\bin\Debug\piano-practice.exe
 C:\Users\cezar\documents\visual studio 2015\Projects\piano-practice\bin\Debug\piano-practice.pdb
 C:\Users\cezar\documents\visual studio 2015\Projects\piano-practice\obj\Debug\piano-practice.exe
 C:\Users\cezar\documents\visual studio 2015\Projects\piano-practice\obj\Debug\piano-practice.pdb
+C:\Users\cezar\documents\visual studio 2015\Projects\piano-practice\obj\Debug\piano_practice.PianoPractice.resources

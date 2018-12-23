@@ -1,16 +1,9 @@
 ﻿namespace piano_practice
 {
-    partial class window
+    partial class PianoPractice
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,13 +15,9 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(window));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PianoPractice));
             this.c_key = new System.Windows.Forms.PictureBox();
             this.d_key = new System.Windows.Forms.PictureBox();
             this.e_key = new System.Windows.Forms.PictureBox();
@@ -45,6 +34,10 @@
             this.btnPlaySequence = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnRestart = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblScore = new System.Windows.Forms.Label();
+            this.lblErrors = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.c_key)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.d_key)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.e_key)).BeginInit();
@@ -261,6 +254,7 @@
             this.btnHelp.TabIndex = 14;
             this.btnHelp.TabStop = false;
             this.btnHelp.UseVisualStyleBackColor = false;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // btnRestart
             // 
@@ -273,14 +267,62 @@
             this.btnRestart.TabIndex = 15;
             this.btnRestart.TabStop = false;
             this.btnRestart.UseVisualStyleBackColor = false;
+            this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
             // 
-            // window
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(505, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 17);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "label2";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(712, 70);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(135, 134);
+            this.button1.TabIndex = 17;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // lblScore
+            // 
+            this.lblScore.AutoSize = true;
+            this.lblScore.BackColor = System.Drawing.Color.Transparent;
+            this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblScore.ForeColor = System.Drawing.Color.White;
+            this.lblScore.Location = new System.Drawing.Point(65, 265);
+            this.lblScore.MinimumSize = new System.Drawing.Size(300, 42);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(300, 42);
+            this.lblScore.TabIndex = 18;
+            this.lblScore.Text = "Score: 0";
+            // 
+            // lblErrors
+            // 
+            this.lblErrors.AutoSize = true;
+            this.lblErrors.BackColor = System.Drawing.Color.Transparent;
+            this.lblErrors.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblErrors.ForeColor = System.Drawing.Color.White;
+            this.lblErrors.Location = new System.Drawing.Point(1065, 268);
+            this.lblErrors.MinimumSize = new System.Drawing.Size(200, 42);
+            this.lblErrors.Name = "lblErrors";
+            this.lblErrors.Size = new System.Drawing.Size(200, 42);
+            this.lblErrors.TabIndex = 19;
+            this.lblErrors.Text = "Errors: 0/3";
+            // 
+            // PianoPractice
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.lblErrors);
+            this.Controls.Add(this.lblScore);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.btnPlaySequence);
@@ -303,7 +345,7 @@
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1280, 720);
             this.MinimumSize = new System.Drawing.Size(1279, 719);
-            this.Name = "window";
+            this.Name = "PianoPractice";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Piano Practice";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Window_KeyDown);
@@ -343,6 +385,10 @@
         private System.Windows.Forms.Button btnPlaySequence;
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Button btnRestart;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblScore;
+        private System.Windows.Forms.Label lblErrors;
     }
 }
 

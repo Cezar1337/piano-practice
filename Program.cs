@@ -16,7 +16,7 @@ namespace piano_practice
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new window());
+            Application.Run(new PianoPractice());
         }
     }
 }

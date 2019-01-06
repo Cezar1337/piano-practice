@@ -8,8 +8,8 @@ namespace piano_practice
 {
     class Sequence
     {
-        public int length;
-        private int[] arr;
+        public int length; //specifies the amount of generated random keys
+        private int[] arr; //defines the sequence array
         public Sequence(int l)
         {
             this.length = l;
@@ -17,11 +17,11 @@ namespace piano_practice
             Random rnd = new Random();
             for(int i=0;i < l;i++)
             {
-                arr[i] = (int)rnd.Next(0, 12);
+                arr[i] = (int)rnd.Next(0, 12); //fill the array with numbers from 0 to 11
             }
         }
 
-        public int[] ReturnSequence()
+        public int[] ReturnSequence() //return the generated sequence as an array of integers
         {
             return arr;
         }

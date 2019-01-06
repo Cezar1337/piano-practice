@@ -9,20 +9,16 @@ namespace piano_practice
 {
     public class Note
     {
-        private Color highlight_color;
-        private Color original_color;
-        private string note_code;
-        public bool playing = false;
+        private string note_code; //string used in the construction of sound load paths
+        public bool playing = false; //bool for preventing sound overwrite
 
-        public Note()
+        public Note() //constructor with no parameters
         {
-            this.highlight_color = Color.Aqua;
             this.note_code = "";
-            this.original_color = Color.White;
             this.playing = false;
         }
 
-        public void Translate(string code)
+        public void Translate(string code) //translate a keyboard button into a note name
         {
             switch(code)
             {
@@ -65,7 +61,7 @@ namespace piano_practice
             }
         }
 
-        public void Play()
+        public void Play() //playes the sound from a media player
         {
             var key = new System.Windows.Media.MediaPlayer();
             if (!playing) //is a sound currently being played?

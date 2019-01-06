@@ -30,14 +30,12 @@
             this.f_sharp_key = new System.Windows.Forms.PictureBox();
             this.g_sharp_key = new System.Windows.Forms.PictureBox();
             this.a_sharp_key = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnPlaySequence = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnRestart = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.lblScore = new System.Windows.Forms.Label();
             this.lblErrors = new System.Windows.Forms.Label();
+            this.lblMessages = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.c_key)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.d_key)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.e_key)).BeginInit();
@@ -220,15 +218,6 @@
             this.a_sharp_key.TabIndex = 11;
             this.a_sharp_key.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(229, 71);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "label1";
-            // 
             // btnPlaySequence
             // 
             this.btnPlaySequence.BackColor = System.Drawing.Color.Maroon;
@@ -269,23 +258,6 @@
             this.btnRestart.UseVisualStyleBackColor = false;
             this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(505, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "label2";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(712, 70);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 134);
-            this.button1.TabIndex = 17;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // lblScore
             // 
             this.lblScore.AutoSize = true;
@@ -312,6 +284,19 @@
             this.lblErrors.TabIndex = 19;
             this.lblErrors.Text = "Errors: 0/3";
             // 
+            // lblMessages
+            // 
+            this.lblMessages.AutoSize = true;
+            this.lblMessages.BackColor = System.Drawing.Color.Transparent;
+            this.lblMessages.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblMessages.ForeColor = System.Drawing.Color.White;
+            this.lblMessages.Location = new System.Drawing.Point(2, 25);
+            this.lblMessages.MinimumSize = new System.Drawing.Size(1258, 200);
+            this.lblMessages.Name = "lblMessages";
+            this.lblMessages.Size = new System.Drawing.Size(1258, 200);
+            this.lblMessages.TabIndex = 20;
+            this.lblMessages.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // PianoPractice
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -319,14 +304,12 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.lblMessages);
             this.Controls.Add(this.lblErrors);
             this.Controls.Add(this.lblScore);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.btnPlaySequence);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.a_sharp_key);
             this.Controls.Add(this.g_sharp_key);
             this.Controls.Add(this.f_sharp_key);
@@ -381,14 +364,12 @@
         private System.Windows.Forms.PictureBox f_sharp_key;
         private System.Windows.Forms.PictureBox g_sharp_key;
         private System.Windows.Forms.PictureBox a_sharp_key;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPlaySequence;
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Button btnRestart;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Label lblErrors;
+        private System.Windows.Forms.Label lblMessages;
     }
 }
 

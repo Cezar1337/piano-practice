@@ -15,8 +15,8 @@ namespace piano_practice
         private Note[] notes = new Note[12]; //array for all 12 Note objects
         private int[] sequence; //array for holding returned sequence
         private int lengthofSequence; //parameter for sequence generation, difficulty
-        public bool playingEnabled = true; //bool allowing the player to use the keyboard
-        public List<int> sequencePlayed = new List<int>(); //list containing user input
+        private bool playingEnabled = true; //bool allowing the player to use the keyboard
+        private List<int> sequencePlayed = new List<int>(); //list containing user input
         private int sequenceCounter; //used to identify the right time to compare sequences
         private bool waitingForSequence = false; //bool that enables collecting user input
         private int score = 0; //player's score
@@ -46,7 +46,7 @@ namespace piano_practice
             {
                 sequence1 += i.ToString();
             }
-            for(int i=0;i<lengthofSequence;i++)
+            for(int i = 0; i < lengthofSequence; i++)
             {
                 sequence2 += sequence[i].ToString();
             }
@@ -89,7 +89,7 @@ namespace piano_practice
             lengthofSequence = 3; //set starting parameteres
             sequenceCounter = 0;
 
-            for(int i=0;i<12;i++) //create objects for all the keys
+            for(int i = 0; i < 12; i++) //create objects for all the keys
             {
                 notes[i] = new Note(); 
             }
@@ -309,7 +309,7 @@ namespace piano_practice
                         sequenceCounter++; //increase the number of notes played
                     }
                 }
-                if(sequenceCounter==lengthofSequence && waitingForSequence) //if the player played sequence is the correct length
+                if(sequenceCounter == lengthofSequence && waitingForSequence) //if the player played sequence is the correct length
                 {
                     if(AreSequencesEqual()) //if the sequence is correct
                     {
@@ -317,7 +317,7 @@ namespace piano_practice
                         score += 50 * lengthofSequence; //calculate score depending on the current difficulty
                         lblScore.Text = "Score: " + score.ToString(); //update score display
                         lblMessages.Text = "Sequence correct!\nPress \"Play sequence\" to continue..."; //info message
-                        if (roundsCompleted%3==0 && lengthofSequence<10) //increase sequence length every 3 completed rounds
+                        if (roundsCompleted % 3 == 0 && lengthofSequence < 10) //increase sequence length every 3 completed rounds
                         {
                             lengthofSequence++;
                         }
@@ -325,11 +325,11 @@ namespace piano_practice
                     else
                     {
                         errors++; //increase error count
-                        lblErrors.Text = "Errors: " + errors.ToString() + "/3"; //update error desplay
+                        lblErrors.Text = "Errors: " + errors.ToString() + "/3"; //update error display
                         lblMessages.Text = "Sequence incorrect...\nPress \"Play sequence\" to continue..."; //info message
-                        if(errors==3) //end the game if the player made 3 mistakes
+                        if(errors == 3) //end the game if the player made 3 mistakes
                         {
-                            lblMessages.Text="Game over! Your score is: "+score+"\nPress \"Play sequence\" to play again...";
+                            lblMessages.Text="Game over! Your score is: " + score + "\nPress \"Play sequence\" to play again..."; //display score
                             ClearGameInfo();
                         }
                     }
@@ -348,7 +348,7 @@ namespace piano_practice
 
             btnPlaySequence.Enabled = false; //disable further sequence generation
             playingEnabled = false; //disable playing while a sequence is being shown
-            for(int i=0;i<sequence.Length;i++)
+            for(int i = 0; i < sequence.Length; i++)
             {
                 HighlightKey(sequence[i], true); //highlight a key
                 wait(800);
@@ -361,13 +361,13 @@ namespace piano_practice
 
         private void btnRestart_Click(object sender, EventArgs e) //listener for a "Reset" button press
         {
-            lblMessages.Text="Game restarted!\nPress \"Play Sequence\" to start over..."; //info message
+            lblMessages.Text = "Game restarted!\nPress \"Play Sequence\" to start over..."; //info message
             ClearGameInfo(); //restart the game
         }
 
         private void btnHelp_Click(object sender, EventArgs e) //listener for a "Help" button press
         {
-            lblMessages.Text="Replay sequences to earn points, after a few won rounds, the sequences get longer!\nPress \"Play sequence\" to start the game\nYou can restart the game at any point by pressing \"Restart\"!\nGood Luck!";
+            lblMessages.Text = "Replay sequences to earn points, after a few won rounds, the sequences get longer!\nPress \"Play sequence\" to start the game\nYou can restart the game at any point by pressing \"Restart\"!\nGood Luck!";
         }
     }
 }

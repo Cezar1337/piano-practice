@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DynamicHelp xmlns="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd" xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" xsi:schemaLocation="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd">	
+   <LINKGROUP ID="piano-practice" Title="SOLUTION-WIDE PROPERTIES Reference Help" Priority="2100">
+      <GLYPH Expanded="vs:/ctxhelp_show.gif" Collapsed="vs:/ctxhelp_hide.gif"/>
+   </LINKGROUP>
+
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.PianoPractice.AreSequencesEqual" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_0000000000000013.html" LinkGroup="piano-practice">AreSequencesEqual Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.PianoPractice.ClearGameInfo" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_0000000000000012.html" LinkGroup="piano-practice">ClearGameInfo Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.PianoPractice.HighlightKey" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_0000000000000016.html" LinkGroup="piano-practice">HighlightKey Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.Note" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_0000000000000001.html" LinkGroup="piano-practice">Note Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.Note.Note" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_0000000000000004.html" LinkGroup="piano-practice">Note Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.PianoPractice" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_0000000000000007.html" LinkGroup="piano-practice">PianoPractice Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.PianoPractice.PianoPractice" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_0000000000000015.html" LinkGroup="piano-practice">PianoPractice Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.Note.Play" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_0000000000000006.html" LinkGroup="piano-practice">Play Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.PianoPractice.ReturnKeyID" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_0000000000000017.html" LinkGroup="piano-practice">ReturnKeyID Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.Sequence.ReturnSequence" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_0000000000000022.html" LinkGroup="piano-practice">ReturnSequence Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SOLUTION-WIDE PROPERTIES Reference" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_0000000000000023.html" LinkGroup="piano-practice">SOLUTION-WIDE PROPERTIES Reference</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.Sequence" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_000000000000001E.html" LinkGroup="piano-practice">Sequence Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.Sequence.Sequence" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_0000000000000021.html" LinkGroup="piano-practice">Sequence Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.Note.Translate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_0000000000000005.html" LinkGroup="piano-practice">Translate Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.PianoPractice.Window_KeyDown" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_0000000000000018.html" LinkGroup="piano-practice">Window_KeyDown Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.PianoPractice.Window_KeyUp" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_0000000000000019.html" LinkGroup="piano-practice">Window_KeyUp Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.Sequence.arr" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_0000000000000020.html" LinkGroup="piano-practice">arr Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.PianoPractice.btnHelp_Click" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_000000000000001C.html" LinkGroup="piano-practice">btnHelp_Click Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.PianoPractice.btnPlaySequence_Click" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_000000000000001A.html" LinkGroup="piano-practice">btnPlaySequence_Click Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.PianoPractice.btnRestart_Click" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_000000000000001B.html" LinkGroup="piano-practice">btnRestart_Click Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.PianoPractice.errors" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_0000000000000010.html" LinkGroup="piano-practice">errors Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.Sequence.length" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_000000000000001F.html" LinkGroup="piano-practice">length Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.PianoPractice.lengthofSequence" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_000000000000000A.html" LinkGroup="piano-practice">lengthofSequence Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.Note.note_code" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_0000000000000002.html" LinkGroup="piano-practice">note_code Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.PianoPractice.notes" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_0000000000000008.html" LinkGroup="piano-practice">notes Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_0000000000000000.html" LinkGroup="piano-practice">piano_practice Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.Note.playing" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_0000000000000003.html" LinkGroup="piano-practice">playing Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.PianoPractice.playingEnabled" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_000000000000000B.html" LinkGroup="piano-practice">playingEnabled Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.PianoPractice.roundsCompleted" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_0000000000000011.html" LinkGroup="piano-practice">roundsCompleted Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.PianoPractice.score" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_000000000000000F.html" LinkGroup="piano-practice">score Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.PianoPractice.sequence" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_0000000000000009.html" LinkGroup="piano-practice">sequence Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.PianoPractice.sequenceCounter" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_000000000000000D.html" LinkGroup="piano-practice">sequenceCounter Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.PianoPractice.sequencePlayed" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_000000000000000C.html" LinkGroup="piano-practice">sequencePlayed Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.PianoPractice.wait" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_0000000000000014.html" LinkGroup="piano-practice">wait Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="piano_practice.PianoPractice.waitingForSequence" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:piano-practice.chm::/topic_000000000000000E.html" LinkGroup="piano-practice">waitingForSequence Field</LItem>
+      </Links>
+   </Context>
+   
+
+</DynamicHelp>
+

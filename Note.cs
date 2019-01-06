@@ -7,18 +7,33 @@ using System.Drawing;
 
 namespace piano_practice
 {
+    /// <summary>
+    /// Contains information about a single note
+    /// </summary>
     public class Note
     {
-        private string note_code; //string used in the construction of sound load paths
-        public bool playing = false; //bool for preventing sound overwrite
+        /// <summary>
+        /// String used in the construction of sound load paths
+        /// </summary>
+        private string note_code;
+        /// <summary>
+        /// Bool for preventing sound overwrite
+        /// </summary>
+        public bool playing = false;
 
-        public Note() //constructor with no parameters
+        /// <summary>
+        /// Sets default value to fields
+        /// </summary>
+        public Note()
         {
             this.note_code = "";
             this.playing = false;
         }
-
-        public void Translate(string code) //translate a keyboard button into a note name
+        /// <summary>
+        /// Translates a keyboard button into a note name
+        /// </summary>
+        /// <param name="code">Text used in construction of load paths</param>
+        public void Translate(string code) //
         {
             switch(code)
             {
@@ -60,8 +75,10 @@ namespace piano_practice
                     break;
             }
         }
-
-        public void Play() //playes the sound from a media player
+        /// <summary>
+        /// Playes the sound from a media player
+        /// </summary>
+        public void Play()
         {
             var key = new System.Windows.Media.MediaPlayer();
             if (!playing) //is a sound currently being played?

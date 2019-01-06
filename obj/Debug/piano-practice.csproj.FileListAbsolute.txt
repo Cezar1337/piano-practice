@@ -7,3 +7,4 @@ C:\Users\cezar\documents\visual studio 2015\Projects\piano-practice\bin\Debug\pi
 C:\Users\cezar\documents\visual studio 2015\Projects\piano-practice\obj\Debug\piano-practice.exe
 C:\Users\cezar\documents\visual studio 2015\Projects\piano-practice\obj\Debug\piano-practice.pdb
 C:\Users\cezar\documents\visual studio 2015\Projects\piano-practice\obj\Debug\piano_practice.PianoPractice.resources
+C:\Users\cezar\documents\visual studio 2015\Projects\piano-practice\bin\Debug\piano-practice.XML

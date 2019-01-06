@@ -8,22 +8,61 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// Namespace containing all classes regarding Piano Practice
+/// </summary>
 namespace piano_practice
 {
+    /// <summary>
+    /// Main form class
+    /// </summary>
     public partial class PianoPractice : Form
     {
-        private Note[] notes = new Note[12]; //array for all 12 Note objects
-        private int[] sequence; //array for holding returned sequence
-        private int lengthofSequence; //parameter for sequence generation, difficulty
-        private bool playingEnabled = true; //bool allowing the player to use the keyboard
-        private List<int> sequencePlayed = new List<int>(); //list containing user input
-        private int sequenceCounter; //used to identify the right time to compare sequences
-        private bool waitingForSequence = false; //bool that enables collecting user input
-        private int score = 0; //player's score
-        private int errors = 0; //number of errors; 3 result in the game ending
-        private int roundsCompleted = 0; //used for difficulty scaling
+        /// <summary>
+        /// Array for all 12 Note objects
+        /// </summary>
+        private Note[] notes = new Note[12];
+        /// <summary>
+        /// Array holding returned sequence
+        /// </summary>
+        private int[] sequence;
+        /// <summary>
+        /// Parameter for sequence generation, difficulty
+        /// </summary>
+        public int lengthofSequence;
+        /// <summary>
+        /// Bool allowing the player to use the keyboard
+        /// </summary>
+        public bool playingEnabled = true;
+        /// <summary>
+        /// List containing user input
+        /// </summary>
+        public List<int> sequencePlayed = new List<int>();
+        /// <summary>
+        /// Amount of keys the player has input
+        /// </summary>
+        public int sequenceCounter;
+        /// <summary>
+        /// Bool that enables collecting user input
+        /// </summary>
+        public bool waitingForSequence = false;
+        /// <summary>
+        /// Player's score
+        /// </summary>
+        public int score = 0;
+        /// <summary>
+        /// Number of errors; 3 result in the game ending
+        /// </summary>
+        public int errors = 0;
+        /// <summary>
+        /// Used for difficulty scaling
+        /// </summary>
+        public int roundsCompleted = 0;
 
-        public void ClearGameInfo() //start the game over - reset score, errors, enable all buttons and playing
+        /// <summary>
+        /// Starts the game over - reset score, errors, enable all buttons and playing
+        /// </summary>
+        public void ClearGameInfo()
         {
             score = 0;
             errors = 0;
@@ -36,8 +75,11 @@ namespace piano_practice
             waitingForSequence = false;
             btnHelp.Enabled = true;
         }
-
-        public bool AreSequencesEqual() //compare generated sequence with the player's
+        /// <summary>
+        /// Compare generated sequence with the player's
+        /// </summary>
+        /// <returns>True or false</returns>
+        public bool AreSequencesEqual()
         {
             
             String sequence1 = ""; //convert both sequences to string
@@ -65,7 +107,11 @@ namespace piano_practice
             }
         }
 
-        public void wait(int milliseconds) //stop the application for a desired amount of miliseconds
+        /// <summary>
+        /// Stop the application for a desired amount of miliseconds
+        /// </summary>
+        /// <param name="milliseconds">Time in milliseconds</param>
+        public void wait(int milliseconds) //
         {
             System.Windows.Forms.Timer timer1 = new System.Windows.Forms.Timer();
             if (milliseconds == 0 || milliseconds < 0) return;
@@ -82,7 +128,10 @@ namespace piano_practice
                 Application.DoEvents();
             }
         }
-        public PianoPractice() //component initialization
+        /// <summary>
+        /// Initiates components
+        /// </summary>
+        public PianoPractice()
         {
             InitializeComponent(); //initialize form components
 
@@ -110,8 +159,12 @@ namespace piano_practice
 
             lblMessages.Text = "Welcome to Piano Practice!\nPress \"Play sequence\" to start playing..."; //welcoming message
         }
-
-        private void HighlightKey(int keyNumber, bool playing) //change back colors of keys when pressed
+        /// <summary>
+        /// Change the back colors of keys when pressed
+        /// </summary>
+        /// <param name="keyNumber">Key identifier</param>
+        /// <param name="playing">Flag indicating if playback is in progress</param>
+        public void HighlightKey(int keyNumber, bool playing) //
         {
             switch (keyNumber) //check which key to "highlight"
             {
@@ -237,7 +290,12 @@ namespace piano_practice
                     break;
             }
         }
-        private int ReturnKeyID(String keyCode) //returns the ID of a key based on a keyboard button
+        /// <summary>
+        /// Get the ID of a key based on a keyboard button
+        /// </summary>
+        /// <param name="keyCode">Integer value from 0 to 11</param>
+        /// <returns>Key code from 0 to 11</returns>
+        public int ReturnKeyID(String keyCode) //
         {
             int keyID = -1; //neutral value for any other keys
             switch (keyCode)
@@ -281,7 +339,12 @@ namespace piano_practice
             }
             return keyID;
         }
-        private void Window_KeyDown(object sender, KeyEventArgs e) //listener for a key being held down
+        /// <summary>
+        /// Listener for a key being held down
+        /// </summary>
+        /// <param name="sender">Sender</param>
+        /// <param name="e">Event</param>
+        public void Window_KeyDown(object sender, KeyEventArgs e)
         {
             if (playingEnabled) //check if keyboard is enabled
             {
@@ -293,8 +356,12 @@ namespace piano_practice
                 }
             }
         }
-
-        private void Window_KeyUp(object sender, KeyEventArgs e) //listener for a key being released
+        /// <summary>
+        /// Listener for a key being released
+        /// </summary>
+        /// <param name="sender">Sender</param>
+        /// <param name="e">Event</param>
+        public void Window_KeyUp(object sender, KeyEventArgs e)
         {
             if (playingEnabled) //check if keyboard is enabled
             {
@@ -337,8 +404,12 @@ namespace piano_practice
                 }
             }
         }
-
-        private void btnPlaySequence_Click(object sender, EventArgs e) //listener for clicking the "Play Sequence" button
+        /// <summary>
+        /// Listener for clicking the "Play Sequence" button
+        /// </summary>
+        /// <param name="sender">Sender</param>
+        /// <param name="e">Event</param>
+        public void btnPlaySequence_Click(object sender, EventArgs e)
         {
             Sequence s = new Sequence(lengthofSequence);
             sequence = s.ReturnSequence(); //get generated sequence
@@ -358,14 +429,22 @@ namespace piano_practice
             playingEnabled = true; //enable playing
             this.Focus(); //added to prevent additional system sounds while playing notes
         }
-
-        private void btnRestart_Click(object sender, EventArgs e) //listener for a "Reset" button press
+        /// <summary>
+        /// Listener for a "Reset" button press
+        /// </summary>
+        /// <param name="sender">Sender</param>
+        /// <param name="e">Event</param>
+        public void btnRestart_Click(object sender, EventArgs e)
         {
             lblMessages.Text = "Game restarted!\nPress \"Play Sequence\" to start over..."; //info message
             ClearGameInfo(); //restart the game
         }
-
-        private void btnHelp_Click(object sender, EventArgs e) //listener for a "Help" button press
+        /// <summary>
+        /// Listener for a "Help" button press
+        /// </summary>
+        /// <param name="sender">Sender</param>
+        /// <param name="e">Event</param>
+        public void btnHelp_Click(object sender, EventArgs e)
         {
             lblMessages.Text = "Replay sequences to earn points, after a few won rounds, the sequences get longer!\nPress \"Play sequence\" to start the game\nYou can restart the game at any point by pressing \"Restart\"!\nGood Luck!";
         }

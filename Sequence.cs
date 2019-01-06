@@ -6,10 +6,23 @@ using System.Threading.Tasks;
 
 namespace piano_practice
 {
-    class Sequence
+    /// <summary>
+    /// Generates and contains information about a sequence
+    /// </summary>
+    public class Sequence
     {
-        private int length; //specifies the amount of generated random keys
-        private int[] arr; //defines the sequence array
+        /// <summary>
+        /// Specifies the amount of generated random keys
+        /// </summary>
+        private int length;
+        /// <summary>
+        /// Holds generated sequence
+        /// </summary>
+        private int[] arr;
+        /// <summary>
+        /// Generates a random sequence of length "l"
+        /// </summary>
+        /// <param name="l">Length of the generated sequence</param>
         public Sequence(int l)
         {
             this.length = l;
@@ -20,8 +33,11 @@ namespace piano_practice
                 arr[i] = (int)rnd.Next(0, 12); //fill the array with numbers from 0 to 11
             }
         }
-
-        public int[] ReturnSequence() //return the generated sequence as an array of integers
+        /// <summary>
+        /// Return the generated sequence
+        /// </summary>
+        /// <returns>An array of integers</returns>
+        public int[] ReturnSequence()
         {
             return arr;
         }

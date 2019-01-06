@@ -6,6 +6,9 @@ using System.Windows.Forms;
 
 namespace piano_practice
 {
+    /// <summary>
+    /// Main program class
+    /// </summary>
     static class Program
     {
         [STAThread]
